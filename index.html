@@ -1,247 +1,279 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo Dashboard</title>
 
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<title>Todo Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 </head>
 
 <body>
-    <div class="app">
-        <!-- Sidebar -->
 
-        <aside class="sidebar">
-            <h2>TodoApp</h2>
+<div class="app">
 
-            <ul>
-                <li class="active" onclick="showPage('dashboard')">
-                    <i class="fa fa-home"></i> Dashboard
-                </li>
+<!-- SIDEBAR -->
 
-                <li onclick="showPage('all')">
-                    <i class="fa fa-list"></i> All Tasks
-                </li>
+<aside class="sidebar">
 
-                <li onclick="showPage('completed')">
-                    <i class="fa fa-check"></i> Completed
-                </li>
+<h2>TodoApp</h2>
 
-                <li onclick="showPage('settings')">
-                    <i class="fa fa-gear"></i> Settings
-                </li>
-            </ul>
-        </aside>
+<ul>
 
-        <!-- Main Content -->
+<li onclick="showPage('dashboard')">
+<i class="fa fa-home"></i> Dashboard
+</li>
 
-        <main class="main-content">
-            <header class="header">
-                <h1 id="page-title">Dashboard</h1>
-            </header>
+<li onclick="showPage('all')">
+<i class="fa fa-list"></i> All Tasks
+</li>
 
-            <!-- DASHBOARD PAGE -->
+<li onclick="showPage('completed')">
+<i class="fa fa-check"></i> Completed
+</li>
 
-            <section id="dashboard" class="page active-page">
-                <div class="todo-container">
-                    <div class="todo-header">
-            
-                    </div>
+<li onclick="showPage('settings')">
+<i class="fa fa-gear"></i> Settings
+</li>
 
-                    <div class="input-group">
-                        <input type="text" id="todo-input" placeholder="Add new task" />
+</ul>
 
-                        <button>
-                            <i class="fa fa-plus"></i>
-                        </button>
-                    </div>
+</aside>
 
-                    <ul id="todo-list">
-                        <li>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Learn HTML</span>
-                            </label>
+<!-- MAIN -->
 
-                            <button class="delete-btn">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Learn CSS</span>
-                            </label>
+<main class="main-content">
 
-                            <button class="delete-btn">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Learn JavaScript</span>
-                            </label>
+<header class="header">
+<h1 id="page-title">Create Tasks</h1>
+</header>
 
-                            <button class="delete-btn">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+<!-- DASHBOARD -->
 
-            <!-- ALL TASK PAGE -->
+<section id="dashboard" class="page active-page">
 
-            <section id="all" class="page">
+<div class="todo-container">
 
-                <div class="todo-container">
-                    <div class="todo-header">
+<div class="input-group">
 
+<input type="text" placeholder="Add new task">
 
+<button>
+<i class="fa fa-plus"></i>
+</button>
 
-                        <div class="input-group">
-                            <input type="text" id="todo-input" placeholder="Add new task" />
+</div>
 
-                            <button>
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </div>
+<ul class="todo-list">
 
-                        <ul id="todo-list">
-                            <li>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>Learn HTML</span>
-                                </label>
+<li>
 
-                                <button class="delete-btn">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>Learn CSS</span>
-                                </label>
+<label>
+<input type="checkbox">
+<span>Learn HTML</span>
+</label>
 
-                                <button class="delete-btn">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>Learn JavaScript</span>
-                                </label>
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
 
-                                <button class="delete-btn">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-            </section>
+</li>
 
-            <!-- COMPLETED PAGE -->
+<li>
 
-            <section id="completed" class="page">
-                <div class="todo-container">
-                    <div class="todo-header">
+<label>
+<input type="checkbox">
+<span>Learn CSS</span>
+</label>
 
-                        <div class="input-group">
-                            <input type="text" id="todo-input" placeholder="Add new task" />
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
 
-                            <button>
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </div>
+</li>
 
-                        <ul id="todo-list">
-                            <li>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>Learn HTML</span>
-                                </label>
+<li>
 
-                                <button class="delete-btn">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>Learn CSS</span>
-                                </label>
+<label>
+<input type="checkbox">
+<span>Learn JavaScript</span>
+</label>
 
-                                <button class="delete-btn">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-            </section>
-            </section>
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
 
-            <!-- SETTINGS PAGE -->
+</li>
 
-            <section id="settings" class="page">
-                <div class="todo-container">
-                    <div class="todo-header">
+</ul>
 
-                        <div class="settings-container">
+</div>
 
-                            <div class="setting-item">
-                                <label>Profile Name</label>
-                                <input type="text" placeholder="Enter your name">
-                            </div>
+</section>
 
-                            <div class="setting-item">
-                                <label>Email</label>
-                                <input type="email" placeholder="Enter your email">
-                            </div>
+<!-- ALL TASKS -->
 
-                            <div class="setting-item toggle-setting">
-                                <label>Dark Mode</label>
-                                <input type="checkbox">
-                            </div>
+<section id="all" class="page">
 
-                            <div class="setting-item toggle-setting">
-                                <label>Enable Notifications</label>
-                                <input type="checkbox">
-                            </div>
+<div class="todo-container">
 
-                            <button class="save-btn">Save Settings</button>
+<ul class="todo-list">
 
-                        </div>
+<li>
+<label>
+<input type="checkbox">
+<span>Learn HTML</span>
+</label>
 
-            </section>
-        </main>
-    </div>
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
+</li>
 
-    <script>
-        function showPage(pageId) {
+<li>
+<label>
+<input type="checkbox">
+<span>Learn CSS</span>
+</label>
 
-    document.querySelectorAll(".page").forEach((p) => {
-        p.classList.remove("active-page");
-    });
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
+</li>
 
-    document.getElementById(pageId).classList.add("active-page");
+<li>
+<label>
+<input type="checkbox">
+<span>Learn JavaScript</span>
+</label>
 
-    const titles = {
-        dashboard: "Create Tasks",
-        all: "All Tasks",
-        completed: "Completed Tasks",
-        settings: "Settings"
-    };
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
+</li>
 
-    document.getElementById("page-title").innerText = titles[pageId];
+</ul>
+
+</div>
+
+</section>
+
+<!-- COMPLETED -->
+
+<section id="completed" class="page">
+
+<div class="todo-container">
+
+<ul class="todo-list">
+
+<li>
+<label>
+<input type="checkbox" checked>
+<span>Learn HTML</span>
+</label>
+
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
+</li>
+
+<li>
+<label>
+<input type="checkbox" checked>
+<span>Learn CSS</span>
+</label>
+
+<button class="delete-btn">
+<i class="fa fa-trash"></i>
+</button>
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- SETTINGS -->
+
+<section id="settings" class="page">
+
+<div class="todo-container">
+
+<div class="settings-container">
+
+<div class="setting-item">
+
+<label>Profile Name</label>
+
+<input type="text" placeholder="Enter your name">
+
+</div>
+
+<div class="setting-item">
+
+<label>Email</label>
+
+<input type="email" placeholder="Enter your email">
+
+</div>
+
+<div class="setting-item toggle-setting">
+
+<label>Dark Mode</label>
+
+<input type="checkbox">
+
+</div>
+
+<div class="setting-item toggle-setting">
+
+<label>Enable Notifications</label>
+
+<input type="checkbox">
+
+</div>
+
+<button class="save-btn">Save Settings</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script>
+
+function showPage(pageId){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active-page")
+})
+
+document.getElementById(pageId).classList.add("active-page")
+
+const titles={
+dashboard:"Create Tasks",
+all:"All Tasks",
+completed:"Completed Tasks",
+settings:"Settings"
 }
-    </script>
-</body>
 
+document.getElementById("page-title").innerText=titles[pageId]
+
+}
+
+</script>
+
+</body>
 </html>

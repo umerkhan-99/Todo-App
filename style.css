@@ -1,190 +1,166 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+body{
+min-height:100vh;
 }
 
-.app {
-  display: flex;
-  min-height: 100vh;
+/* APP */
+
+.app{
+display:flex;
+min-height:100vh;
 }
 
 /* SIDEBAR */
 
-.sidebar {
-  width: 230px;
-  background: #1e1e2f;
-  color: white;
-  padding: 25px;
+.sidebar{
+width:230px;
+background:#1e1e2f;
+color:white;
+padding:25px;
 }
 
-.sidebar h2 {
-  margin-bottom: 30px;
+.sidebar h2{
+margin-bottom:30px;
 }
 
-.sidebar ul {
-  list-style: none;
+.sidebar ul{
+list-style:none;
 }
 
-.sidebar li {
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+.sidebar li{
+padding:12px;
+margin-bottom:10px;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
 }
 
 .sidebar li:hover{
-  background: #6a11cb;
+background:#6a11cb;
 }
 
 /* MAIN */
 
-.main-content {
-  padding: 30px;
-  background: #f4f4f4;
-  flex: 1;
+.main-content{
+flex:1;
+padding:30px;
+background:#f4f4f4;
+overflow:auto;
 }
 
-.header {
-  margin-bottom: 20px;
+.header{
+margin-bottom:20px;
 }
 
-/* PAGE SYSTEM */
+/* PAGE */
 
-.page {
-  display: none;
+.page{
+display:none;
 }
 
-.active-page {
-  display: block;
+.active-page{
+display:block;
 }
 
-/* TODO CARD */
+/* TODO CONTAINER */
 
 .todo-container{
 background:white;
 padding:25px;
 width:100%;
-height: 80vh;
+min-height:70vh;
 border-radius:12px;
 box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-/* HEADER */
-
-.todo-header {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.todo-header h2 {
-  font-size: 38px;
-  color: #000000;
-  margin: 20px;
-}
-
-
-
 /* INPUT */
 
-.input-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+.input-group{
+display:flex;
+gap:10px;
+margin-bottom:20px;
 }
 
-.input-group input {
-  flex: 1;
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.input-group input{
+flex:1;
+padding:15px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
-.input-group button {
-  padding: 14px 20px;
-  background: #6a11cb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.input-group button{
+padding:14px 20px;
+background:#6a11cb;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
 }
 
-.input-group button:hover {
-  background: #4b0bb0;
+.input-group button:hover{
+background:#4b0bb0;
 }
 
-/* TASK LIST */
+/* LIST */
 
-#todo-list {
-  list-style: none;
+.todo-list{
+list-style:none;
 }
 
-#todo-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f4f4f4;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 10px;
+.todo-list li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#f4f4f4;
+padding:12px;
+border-radius:6px;
+margin-bottom:10px;
+flex-wrap:wrap;
 }
 
-#todo-list label {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+.todo-list label{
+display:flex;
+gap:8px;
+align-items:center;
 }
 
 /* DELETE */
 
-.delete-btn {
-  background: red;
-  color: white;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 6px;
-  cursor: pointer;
+.delete-btn{
+background:red;
+color:white;
+border:none;
+padding:8px 10px;
+border-radius:6px;
+cursor:pointer;
 }
 
-.delete-btn:hover {
-  background: darkred;
+.delete-btn:hover{
+background:darkred;
 }
 
-/* COMPLETED TASK */
+/* COMPLETED */
 
-#todo-list input:checked + span {
-  text-decoration: line-through;
-  color: gray;
+.todo-list input:checked + span{
+text-decoration:line-through;
+color:gray;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .app {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* SETTINGS PAGE */
+/* SETTINGS */
 
 .settings-container{
 background:white;
 padding:25px;
-width:500px;
+width:100%;
+max-width:500px;
+margin:auto;
 border-radius:12px;
-text-align: left;
-/* box-shadow:0 10px 25px rgba(0,0,0,0.1); */
 }
 
 .setting-item{
@@ -222,4 +198,45 @@ cursor:pointer;
 
 .save-btn:hover{
 background:#4d0ea8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.app{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+text-align:center;
+}
+
+.sidebar ul{
+display:flex;
+justify-content:space-around;
+}
+
+.sidebar li{
+margin:0;
+font-size:14px;
+}
+
+.main-content{
+padding:15px;
+}
+
+}
+
+@media(max-width:500px){
+
+.input-group{
+flex-direction:column;
+}
+
+.input-group button{
+width:100%;
+}
+
 }
